@@ -1,5 +1,3 @@
-//import { fuzzyMatch, formatUrl } from "./helpers.js";
-
 const formatUrl = (url) => {
     return url
         .replace(/^https?:\/\/(www\.)?/, "")
@@ -72,27 +70,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let populateTable = () => {
 
-    webringData["sites"].forEach(siteData => {
-        var tr = document.createElement("tr");
+    webringData["sites"].forEach((siteData, i) => {
 
-        var sitetd = document.createElement("td");
+        var list = document.getElementById("site_list")
 
+        var li = document.createElement("li");
+
+        // //var sitetd = document.createElement("td");
         var link = document.createElement("a");
         link.href = siteData["website"]
-        link.textContent = siteData.website;
-        sitetd.appendChild(link);
+        link.textContent = `<${siteData.name}>`;
+        // //sitetd.appendChild(link);
 
-        var name = document.createElement("td");
-        name.innerText = siteData["name"];
+        // var rsstd = document.createElement("td");
+        var rss = document.createElement("a");
+        rss.href = siteData["rss"]
+        rss.textContent = "{rss}";
+        // rsstd.appendChild(rss);
 
-        var bio = document.createElement("td");
-        bio.innerText = siteData["bio"];
+        // var name = document.createElement("td");
+        // name.innerText = siteData["name"];
 
-        tr.appendChild(sitetd)
-        tr.appendChild(name)
-        tr.appendChild(bio)
-        var table = document.getElementById("site_table")
-        table.appendChild(tr);
+        // var bio = document.createElement("td");
+        // bio.innerText = siteData["bio"];
+
+        li.appendChild(link);
+        li.appendChild(rss);
+        list.appendChild(li);
+        // tr.appendChild(link)
+        // tr.appendChild(rss)
+        // var table = document.getElementById("site_table")
+        // table.appendChild(tr);
     });
 
 }

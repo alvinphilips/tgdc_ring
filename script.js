@@ -95,7 +95,10 @@ let populateTable = () => {
         // bio.innerText = siteData["bio"];
 
         li.appendChild(link);
-        li.appendChild(rss);
+        if (siteData.rss != "") {
+
+            li.appendChild(rss);
+        }
         list.appendChild(li);
         // tr.appendChild(link)
         // tr.appendChild(rss)

@@ -18,9 +18,27 @@ To qualify to join this webring you:
 {
   "name": "Your Name",
   "website": "https://your-website.com",
-  "rss": "https://your-website.com/rss.xml", // if you have one
+  "rss": "https://your-website.com/rss.xml", // if your site has one
 }
 ```
 ### 3. Make a Pull Request and wait for me to merge it!
-- Once you're in, include anchor tags with hrefs that point to:
-- ``
+- Once you're in, include anchor tags on your website to ``webring.jaydenpb.net`` with your site's domain as the tag and url params for the next, previous, or random site:
+- here's a div you can use as a reference, make sure to replace your site here with your domain (not including the https://)
+```html
+<div style="display: flex; align-items: center; gap: 8px;">
+        <a href="https://webring.jaydenpb.net/#your-site-here?nav=prev">←</a>
+        <a href="https://webring.jaydenpb.net/#your-site-here?nav=random" target="_blank">
+            <div style="border: 1px solid black;
+           display: flex; flex-direction: row;  
+            ">
+                <img style="width: 65px;" src="https://webring.jaydenpb.net/img/cntower.svg" alt="CS Webring"
+                    style="width: 24px; height: auto; opacity: 0.8;" />
+                <p style="max-width: 50px; font-size: 16px; font-family:monospace;">
+                    TOR GDC RING
+                </p>
+            </div>
+        </a>
+        <a href="https://webring.jaydenpb.net/#your-site-here?nav=next">→</a>
+    </div>
+
+```

@@ -19,7 +19,7 @@ To qualify to join this webring you:
   "name": "Your Name",
   "website": "https://your-website.com",
   "rss": "https://your-website.com/rss.xml", // if your site has one
-}
+}, // make sure to LEAVE the trailing comma
 ```
 ### 3. Make a Pull Request 
 and wait for me to merge it.

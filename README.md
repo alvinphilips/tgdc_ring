@@ -18,7 +18,7 @@ To qualify to join this webring you:
 {
   "name": "Your Name",
   "website": "https://your-website.com",
-  "rss": "https://your-website.com/rss.xml", // if your site has one
+  "rss": "https://your-website.com/rss.xml", // leave "" if your site doesn't have one
 }, // make sure to LEAVE the trailing comma
 ```
 ### 3. Make a Pull Request 
